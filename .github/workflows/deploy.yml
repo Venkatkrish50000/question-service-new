@@ -13,7 +13,7 @@
       - name: Checkout code
         uses: actions/checkout@v4
 
-        #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s) new ile
 
       - name: SetUp Java
         uses: actions/setup-java@v5
