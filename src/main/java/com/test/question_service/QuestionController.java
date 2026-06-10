@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class QuestionController {
 
-    @GetMapping("api")
+    @GetMapping("/")
     public String addQuestion(){
         return "This is for Docker test! updated.....!!!!WOW ";
     }
