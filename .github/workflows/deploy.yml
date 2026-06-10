@@ -13,15 +13,13 @@
       - name: Checkout code
         run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
-
       - name: SetUp Java
         uses: actions/checkout@v4
-
 
       - name: SetUp Java
         uses: actions/setup-java@v5
         with:
-          distribution: 'temurin' # See 'Supported distributions' for available options
+          distribution: 'temurin'    #See 'Supported distributions' for available options..
           java-version: '21'
 
       - name: Build Jar
