@@ -11,7 +11,7 @@
 
       steps:
       - name: Checkout code
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
         #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
       #- name: SetUp Java
