@@ -50,5 +50,5 @@
           script: |
            docker stop question-service-demo || true
            docker rm question-service-demo || true
-           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/question-service-new:latest
+           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/question-service-new:latest .
            docker run -d --name question-service-demo -p 8080:8080 ${{secrets.DOCKERHUB_USERNAME }}/question-service-new:latest
