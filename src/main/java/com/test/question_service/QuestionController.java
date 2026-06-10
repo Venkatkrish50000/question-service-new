@@ -12,7 +12,7 @@ public class QuestionController {
 
     @GetMapping("/")
     public String addQuestion(){
-        System.out.println("welcome to docker") ;
+       // System.out.println("welcome to docker") ;
 
         return "This is for Docker test! updated.....!!!!WOW";
     }
