@@ -11,9 +11,12 @@
 
       steps:
       - name: Checkout code
+        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+
+      - name: SetUp Java
         uses: actions/checkout@v4
 
-        #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s) new ile
 
       - name: SetUp Java
         uses: actions/setup-java@v5
@@ -30,7 +33,7 @@
         uses: docker/login-action@v3
         with:
            username: ${{ vars.DOCKERHUB_USERNAME }}
-          # password: ${{ secrets.DOCKERHUB_TOKEN }}
+           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker Image
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/question-service-new:latest .
